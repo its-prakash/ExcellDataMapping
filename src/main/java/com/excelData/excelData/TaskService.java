@@ -86,7 +86,7 @@ public class TaskService {
             }
 
 
-            int projectCol = headerMap.getOrDefault("projectname", headerMap.getOrDefault("project", -1));
+            int projectCol = headerMap.getOrDefault("projectname", headerMap.getOrDefault("project", headerMap.getOrDefault("name", -1)));
             int taskCol = headerMap.getOrDefault("taskname", headerMap.getOrDefault("task", -1));
             int assignedCol = headerMap.getOrDefault("assignedto", headerMap.getOrDefault("assigned", -1));
             int startCol = headerMap.getOrDefault("startdate", headerMap.getOrDefault("start", -1));
