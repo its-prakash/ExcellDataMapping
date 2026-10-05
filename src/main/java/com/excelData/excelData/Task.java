@@ -4,12 +4,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
 import java.time.LocalDate;
 
-@Table(name = "task")
+@Table(name = "tasks")
 @NoArgsConstructor
 @Setter
 @Getter
@@ -23,6 +24,7 @@ public class Task {
     private LocalDate startDate;
     private LocalDate endDate;
     private Double progress;
+    @Transient
     private String miscellaneous;
 
 }
